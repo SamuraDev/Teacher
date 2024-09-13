@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #f39c12;
+}
+
+.subjects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.subject-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subject-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.8);
+}
+
+.subject-card h2 {
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.subject-card p {
+  font-size: 1.2rem;
+}
+
+/* Золотая карточка с предложением */
+.elite-offer {
+  background: linear-gradient(45deg, #d4af37, #ffd700, #ffec8b);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 400px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+  animation: shimmer 2s infinite;
+}
+
+.elite-offer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.elite-offer p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #e74c3c;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.discounted-price {
+  color: #f39c12;
+  font-size: 2rem;
+}
+
+/* Анимация перелива */
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Контактная форма */
+.contact-form {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 400px;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.contact-form h3 {
+  color: #f39c12;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: #ccc;
+}
+
+.contact-form button {
+  background-color: #f39c12;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #e67e22;
+}
+
+@media (max-width: 768px) {
+  .subjects {
+    flex-direction: column;
+    align-items: center;
+  }
+}
